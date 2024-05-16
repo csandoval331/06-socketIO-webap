@@ -1,4 +1,12 @@
 # Creating a live chat app
+- express app with socketio sharring same port 3000
+    ```javascript
+    const app = require('express')();
+    const server = require('http').createServer(app);
+    const io = require('socket.io')(server);
+    io.on('connection', () => { /* … */ });
+    server.listen(3000);
+    ```
 
 # Errors encountered
 -  Was getting a [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) issue. 
@@ -345,4 +353,7 @@
 ```
 
 # Links
-[I will be following along this youtube channel](https://www.youtube.com/watch?v=rxzOqP9YwmM)
+- [I will be following along this youtube channel](https://www.youtube.com/watch?v=rxzOqP9YwmM)
+- [Express app with socketio example](https://github.com/socketio/socket.io#in-conjunction-with-express)
+- [GeekforGeek handlebars and express example](https://www.geeksforgeeks.org/handlebars-templating-in-expressjs/)
+- [javascript templating engines -pug, hbs, vs ejs](https://dev.to/m__mdy__m/javascript-templating-engines-pug-handlebars-hbs-and-ejs-jcd)
